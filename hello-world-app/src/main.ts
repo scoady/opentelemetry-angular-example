@@ -9,9 +9,9 @@ const provider = new WebTracerProvider();
 provider.addSpanProcessor(
   new BatchSpanProcessor(
     new OTLPTraceExporter({
-      url: 'https://ingest.lightstep.com:443/v1/traces',  // Your OpenTelemetry Collector URL
+      url: 'https://ingest.lightstep.com:443/v1/traces',  // Your OpenTelemetry Collector URL, in this case, a public OTLP endpoin
       headers: {
-        'Lightstep-Access-Token': '+DTfN7wJFd0gCR5qnVwR3YgX+PS8x90uPsub0OgED9UT2CRXWfRYydBwiQRDHlod5G79Z7RNlxqbuf20H2NgIXlP6e64CVTYFhoIyh22'
+        'Lightstep-Access-Token': 'YOUR_ACCESS_TOKEN',  // Your Lightstep Access Token
       }
     })
   )
